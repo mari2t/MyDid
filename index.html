@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>MyDid</title>
+  
+</head>
+<body id="body">
+    <div class="backPicture"><div>
+    <h1 id="title">My Did</h1>
+    <h2 id="time"></h2>
+    <label>
+        <input type="checkbox" id = "checkId" name="時刻追加">時刻追加 フリーワード
+        <input type="text" id="freeWord" name = "freeWord" required
+        maxlength="30" size="30" length="100">
+    </label>
+    <p></p>
+    <div class="wrapOfList">
+        <p></p>
+        <div class="houseGroup">
+        <h3 id="houseText">家のやること</h3>
+            <div id="houseList"></div>
+        </div>
+        <p></p>
+        <div class="myselfGroup">
+        <h3 id="myselfText">自分のやること</h3>
+        <p></p>
+            <div id="myselfList"></div>
+        </div>
+        <p></p>
+        <div class="allDidGroup">
+        <h3 id="allDidList">今日やったこと</h3>
+        <div id="todayHouseText">＜家事＞</div>
+        <div id="houseDid"></div>
+        <div id="todayMyselfText">＜自分＞</div>
+        <div id="myselfDid"></div>
+        </div>
+    </div>
+    </div>  
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
