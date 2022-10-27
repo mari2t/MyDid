@@ -1,0 +1,86 @@
+
+  .backPicture{
+    background-image: url("hydrangea.jpg");
+    background-size: cover;
+    background-color:rgba(255,255,255,0.85);
+    background-blend-mode:lighten;
+  }
+  h1 {
+    font-size: 28pt;
+    font-family: "Times" ;
+    text-align: center;
+    color:rgb(241, 245, 240);
+    /* background-color: #adecf6; */
+    background-color: #585b52;
+  }
+  h2 {    
+    text-align:center; 
+    background-color:rgba(255,255,255,0.7);
+  }
+  #imgstyle {
+    text-align: center; 
+  }
+  label{
+    display:block;
+    position:relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center; 
+    font-size: large;
+  }
+  label input{
+    margin:auto;
+  }
+  .wrapOfList {
+    display:flex;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #houseText {
+    text-align: center; 
+  }
+  .houseGroup {
+    margin: 0 auto;
+    width: 350px;
+    height: 1500px;
+    background-color:rgba(139, 145, 127, 0.4);
+    border: solid 1px black;
+    font-size: large;
+  }
+
+  #myselfText {
+    text-align: center; 
+  }
+  .myselfGroup {
+    margin: 0 auto;
+    width:350px;
+    height: 1500px;
+    background-color:rgba(139, 145, 127, 0.4);
+    border: solid 1px black;
+    font-size: large;
+  }
+
+  #allDidList{
+    text-align: center; 
+  }
+  #todayHouseText{
+    text-align: center; 
+     margin: 10%; 
+
+  }
+  #todayMyselfText{
+    text-align: center; 
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .allDidGroup{
+    margin: 0 auto;
+    width: 350px;
+    height: 1500px;
+    background-color:rgba(209, 211, 205, 0.4);
+    border: solid 1px black;
+    font-size: large;
+  }
+
