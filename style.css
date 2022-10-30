@@ -42,7 +42,7 @@
   }
   .houseGroup {
     margin: 0 auto;
-    width: 350px;
+    width: 300px;
     height: 1500px;
     background-color:rgba(139, 145, 127, 0.4);
     border: solid 1px black;
@@ -54,7 +54,7 @@
   }
   .myselfGroup {
     margin: 0 auto;
-    width:350px;
+    width:300px;
     height: 1500px;
     background-color:rgba(139, 145, 127, 0.4);
     border: solid 1px black;
