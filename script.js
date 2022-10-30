@@ -1,9 +1,9 @@
 
 //家のやること
 const houseOfWord = [
-    "👦保育園お迎え","🍕夕食準備","🛁息子をお風呂","🥼洗濯機予約","🍽食洗機まわす","🛋息子と寝る",
+    "👦保育園お迎え","🍕夕食","🛁息子をお風呂","🥼洗濯機予約","🍽食洗機まわす","🛋息子と寝る",
     "🧊製氷機の水補給","☕お茶つくり","🥛加湿器水補給","🍙炊飯器セット",
-    "🥐朝食準備","🍔昼食準備","💈洗濯機まわし","👕洗濯物干し","🏍息子と公園に行く",
+    "🥐朝食","🍔昼食","💈洗濯機まわし","👕洗濯物干し","🏍息子と公園に行く",
     "🧦月曜保育園準備","✋息子爪切り","🖥生協注文",
     "🚽トイレ掃除","🚿風呂掃除","🧺洗面所掃除","🧹玄関掃除",
     "🕳ルンバ","💨定期家事",
@@ -13,9 +13,10 @@ const houseOfWord = [
 
 //自分のやること
 const myselfOfWord = [
-    "🧗プランク1分","💃スクワット30回","🏋️‍♂️筋トレ","🤸‍♀️ストレッチ",
+    "😄楽しむ","😌休む","🧗プランク1分","💃スクワット30回","🏋️‍♂️筋トレ","🤸‍♀️ストレッチ",
     "🍹アルコールDAY","⭕ノー飲酒DAY","🦷糸ようじをする","💊ビタミン剤を飲む",
-    "💥美容液を使う","🙋‍♀️仕事する","📝勉強する","📚読書する","🟦インプット","🟥アウトプット"
+    "💥美容液を使う","🙋‍♀️仕事する","📝勉強する","📚読書する","🟦インプット","🟥アウトプット",
+    "🌞起きる","🌜寝る",
 ];
 
 
@@ -125,8 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
 );
 
 
-//時刻取得
-
+//現在時刻取得
 function getNowTime(){
     let result = "";
     let nowTime = new Date();
@@ -139,23 +139,40 @@ function getNowTime(){
     return result;
 }
 
+
+
 //時刻追加とフリーワード関数
 function getOption(str){
     let result = "";
+    let spaceWord = "　　　";
     let element = document.getElementById('checkId');
     let elementFree = document.getElementById('freeWord');
+    let elementSet = document.getElementById("setTime");
+    //現在の時刻追加
     if(element.checked === true){
-        result = str + " : " + getNowTime();
-        element.checked = false;
+        result =  getNowTime()+ "" + str ;
     }
     else{
         result = str;
     }
+    //設定時刻追加
+    if(elementSet.value !== ""){
+        result = elementSet.value  + "" + result ;
+    }
+    //時刻が設定されていなかったとき
+    if(element.checked === false && elementSet.value === ""){
+        result = spaceWord + result
+    }
     //フリーワード判定
     if(elementFree.value !== ""){
-        result = result + " : " + elementFree.value;
+        result = result + " - " + elementFree.value;
         elementFree.value = "";
     }
+
+
+    //各設定リセット
+    element.checked = false;
+    elementSet.value = "";
     return result;
 }
 
