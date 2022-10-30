@@ -11,10 +11,13 @@
     <h1 id="title">My Did</h1>
     <h2 id="time"></h2>
     <label>
-        <input type="checkbox" id = "checkId" name="時刻追加">時刻追加 フリーワード
+        <input type="checkbox" id = "checkId" name="nowTime">現在時刻追記　｜　任意時刻追記
+        <input type="time" id="setTime" name="setTime" step="600">　｜　できたことの後に追記
         <input type="text" id="freeWord" name = "freeWord" required
-        maxlength="30" size="30" length="100">
+        maxlength="30" size="30" length="100"> 
+
     </label>
+    
     <p></p>
     <div class="wrapOfList">
         <p></p>
@@ -30,7 +33,7 @@
         </div>
         <p></p>
         <div class="allDidGroup">
-        <h3 id="allDidList">今日やったこと</h3>
+        <h3 id="allDidList">今日できたこと</h3>
         <div id="todayHouseText">＜家事＞</div>
         <div id="houseDid"></div>
         <div id="todayMyselfText">＜自分＞</div>
