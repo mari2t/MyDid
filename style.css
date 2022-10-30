@@ -31,17 +31,7 @@
   label input{
     margin:auto;
   }
-  labe2{
-    display:block;
-    position:relative;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center; 
-    font-size: large;
-  }
-  labe2 input{
-    margin:auto;
-  }
+
   .wrapOfList {
     display:flex;
     margin-left: 5%;
