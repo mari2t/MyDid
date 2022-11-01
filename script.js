@@ -6,7 +6,7 @@ const houseOfWord = [
     "🥐朝食","🍔昼食","💈洗濯機まわし","👕洗濯物干し","🏍息子と公園に行く",
     "🧦月曜保育園準備","✋息子爪切り","🖥生協注文",
     "🚽トイレ掃除","🚿風呂掃除","🧺洗面所掃除","🧹玄関掃除",
-    "🕳ルンバ","💨定期家事",
+    "🕳ルンバ","💨定期家事","📥整理","📌その他"
 
 ];
 
@@ -16,7 +16,7 @@ const myselfOfWord = [
     "😄楽しむ","😌休む","🧗プランク1分","💃スクワット30回","🏋️‍♂️筋トレ","🤸‍♀️ストレッチ",
     "🍹アルコールDAY","⭕ノー飲酒DAY","🦷糸ようじをする","💊ビタミン剤を飲む",
     "💥美容液を使う","🙋‍♀️仕事する","📝勉強する","📚読書する","🟦インプット","🟥アウトプット",
-    "🌞起きる","🌜寝る",
+    "🌞起きる","🌜寝る","📩整理","📍その他"
 ];
 
 
@@ -121,6 +121,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let Date = today.getDate();
     let dayOfWeek = today.getDay() ;	
     let dayOfWeekStr = [ "日", "月", "火", "水", "木", "金", "土" ] ;	// 曜日(日本語表記)
+    if(Month < 10){
+        Month = "0" + Month
+    }
+    if(Date < 10){
+        Date = "0" + Date
+    }
     target.innerHTML = Year + "-" + Month + "-" + Date + " " + dayOfWeekStr[dayOfWeek] + "曜日";
     }
 );
