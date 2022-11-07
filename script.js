@@ -138,6 +138,9 @@ function getNowTime(){
     let nowTime = new Date();
     let hour = nowTime.getHours();
     let min = nowTime.getMinutes();
+    if(hour < 10){
+        hour = "0" + hour;
+    }
     if(min < 10){
         min = "0" + min;
     }
