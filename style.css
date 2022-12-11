@@ -1,86 +1,129 @@
+body {
+  background-image: url("hydrangea.jpg");
+  background-size: cover;
+  background-color:rgba(255,255,255,0.85);
+  background-blend-mode:lighten;
+}
 
-  .backPicture{
-    background-image: url("hydrangea.jpg");
-    background-size: cover;
-    background-color:rgba(255,255,255,0.85);
-    background-blend-mode:lighten;
-  }
-  h1 {
-    font-size: 28pt;
-    font-family: "Times" ;
-    text-align: center;
-    color:rgb(241, 245, 240);
-    /* background-color: #adecf6; */
-    background-color: #585b52;
-  }
-  h2 {    
-    text-align:center; 
-    background-color:rgba(255,255,255,0.7);
-  }
-  #imgstyle {
-    text-align: center; 
-  }
-  label{
-    display:block;
-    position:relative;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center; 
-    font-size: large;
-  }
-  label input{
-    margin:auto;
-  }
-  .wrapOfList {
-    display:flex;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
+.headerGroup {
+  width: 100%;
+  height:80px;
+  display: flex;
+  align-items: center;
+  background-color: #76796e;
+  position: fixed; /* ヘッダーを固定する */
+  top: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  width: 100%; /* ヘッダーの横幅を指定する */
+  height: 50px; /* ヘッダーの高さを指定する */
+  padding: 10px; /* ヘッダーの余白を指定する(上下左右) */
+}
+.groupTitle {
+  display: block;
+  margin-left: 50px;
+}
+.title {
+  text-align: center;
+  font-size: 38pt;
+  font-family: "Times" ;
+  color: white;
+}
+.groupTime {
+  margin-left: 50px;
+  display: block;
+}
+#time {  
+  color: white;
+}
+#freeWordLabel {
+  margin-left: 50px;
+  display: block;
+  color: white;
+  font-size: large;
+}
 
-  #houseText {
-    text-align: center; 
-  }
-  .houseGroup {
-    margin: 0 auto;
-    width: 350px;
-    height: 1500px;
-    background-color:rgba(139, 145, 127, 0.4);
-    border: solid 1px black;
-    font-size: large;
-  }
+#setTimeLabel {
+  margin-left: 50px;
+  display: block;
+  color: white;
+  font-size: large;
+}
 
-  #myselfText {
-    text-align: center; 
-  }
-  .myselfGroup {
-    margin: 0 auto;
-    width:350px;
-    height: 1500px;
-    background-color:rgba(139, 145, 127, 0.4);
-    border: solid 1px black;
-    font-size: large;
-  }
+#checkboxLabel {
+  margin-left: 50px;
+  display: block;
+  color: white;
+  font-size: large;
+}
+.wrapOfList {
+  display:flex;
+  margin-top: 80px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#houseText {
+  text-align: center; 
+}
+.houseGroup {
+  margin: 0 auto;
+  width: 280px;
+  height: 1500px;
+  background-color:rgba(139, 145, 127, 0.4);
+  border: solid 1px black;
+  border-radius: 8px;
+  font-size: large;
+}
+#ordinaryText {
+  text-align: center; 
+}
+.ordinaryGroup {
+  margin: 0 auto;
+  width:280px;
+  height: 1500px;
+  background-color:rgba(139, 145, 127, 0.4);
+  border: solid 1px black;
+  border-radius: 8px;
+  font-size: large;
+}
+#myselfText {
+  text-align: center; 
+}
+.myselfGroup {
+  margin: 0 auto;
+  width:280px;
+  height: 1500px;
+  background-color:rgba(139, 145, 127, 0.4);
+  border: solid 1px black;
+  border-radius: 8px;
+  font-size: large;
+}
 
-  #allDidList{
-    text-align: center; 
-  }
-  #todayHouseText{
-    text-align: center; 
-     margin: 10%; 
+#allDidList{
+  text-align: center; 
+}
+#todayHouseText{
+  text-align: center; 
+  margin: 5%; 
 
-  }
-  #todayMyselfText{
-    text-align: center; 
-    margin-right: 10%;
-    margin-left: 10%;
-  }
+}
+#todayOrdinaryText{
+  text-align: center; 
+  margin: 5%; 
 
-  .allDidGroup{
-    margin: 0 auto;
-    width: 350px;
-    height: 1500px;
-    background-color:rgba(209, 211, 205, 0.4);
-    border: solid 1px black;
-    font-size: large;
-  }
+}
+#todayMyselfText{
+  text-align: center; 
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.allDidGroup{
+  margin: 0 auto;
+  width: 350px;
+  height: 1500px;
+  background-color:rgba(209, 211, 205, 0.4);
+  border: solid 1px black;
+  border-radius: 8px;
+  font-size: large;
+}
 

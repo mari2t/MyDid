@@ -1,13 +1,18 @@
 
-//家のやること
+//家事・育児
 const houseOfWord = [
-    "👩‍👦息子と過ごす","👦保育園お迎え","🍕夕食","🛁息子をお風呂","🥼洗濯機予約","🍽食洗機まわす","🛋息子と寝る",
-    "🧊製氷機の水補給","☕お茶つくり","🥛加湿器水補給","🍙炊飯器セット",
-    "🥐朝食","🍔昼食","💈洗濯機まわし","👕洗濯物干し","🏍息子と公園に行く",
+    "👩‍👦息子と過ごす","👦保育園お迎え","🛁息子をお風呂","🛋息子と寝る","🏍息子と公園に行く",
+    "🥼洗濯機予約","💈洗濯機まわし","👕洗濯物干し","🍽食洗機まわす",
+    "🧂料理をつくる","🧊製氷機の水補給","☕お茶つくり","🥛加湿器水補給","🍙炊飯器セット",
     "🧦月曜保育園準備","✋息子爪切り","🖥生協注文",
     "🚽トイレ掃除","🚿風呂掃除","🧺洗面所掃除","🧹玄関掃除",
     "🕳ルンバ","💨定期家事","📥整理","📌その他"
 
+];
+//日常
+const ordinaryOfWord = [
+    "🌞起きる","🌜寝る","🥐朝食","🍔昼食","🍕夕食",
+    "🙋‍♀️仕事する","📥整理","📌その他"
 ];
 
 
@@ -15,8 +20,8 @@ const houseOfWord = [
 const myselfOfWord = [
     "😄楽しむ","😌休む","🧗プランク1分","💃スクワット30回","🏋️‍♂️筋トレ","🤸‍♀️ストレッチ",
     "🍹アルコールDAY","⭕ノー飲酒DAY","🦷糸ようじをする","💊ビタミン剤を飲む",
-    "💥美容液を使う","🙋‍♀️仕事する","📝勉強する","📚読書する","🟦インプット","🟥アウトプット",
-    "🌞起きる","🌜寝る","📩整理","📍その他"
+    "💥美容液を使う","📚読書する","🟦インプット","🟥アウトプット",
+    "📩整理","📍その他"
 ];
 
 
@@ -25,11 +30,12 @@ const buttonStyle = {
     border : "solid 1px black",
     borderRadius :  "10px",
     backgroundColor :  "#F5F5F5",
-    margin :  "20px"
+    margin :  "5px"
 }
 
 //バックカラー
 const houseButtoncolor = "#B0E0E6";
+const ordinaryButtoncolor = "#8FBC8F";
 const myselfButtoncolor = "#FFE4E1";
 
 
@@ -68,6 +74,46 @@ document.addEventListener('DOMContentLoaded', function() {
                 addHouseDid.removeChild(erHouseDid);
                 countHouse --;
                 countAddId.innerHTML = "＜家事＞" + countHouse;
+                },);
+       },);
+    }
+    }
+);
+
+//日常ボタン作成
+let ordinaryOfBox = [];//ボタン作成用に定義
+let ordinaryDidBox = [];//やったこと取得用に定義
+let countOrdinary = 0;//やった数を表示するように定義
+document.addEventListener('DOMContentLoaded', function() {
+    let countAddId = document.getElementById("todayOrdinaryText");//やった数<家事>の横に表示するように取得と定義
+    let addOrdinaryDid = document.getElementById('ordinaryDid');//ボタン作成用に取得と定義
+    let container = document.getElementById('ordinaryList');//やったこと挿入用に取得と定義
+    for(let i = 0; i < ordinaryOfWord.length; i++){
+        //ボタン作成、ボタンにテキスト挿入、ボタン装飾、ボタンを家のやることに追加
+        ordinaryOfBox[i] = document.createElement('ul');
+        ordinaryOfBox[i].textContent = ordinaryOfWord[i];
+        for (const value in buttonStyle){
+            ordinaryOfBox[i].style[value] = buttonStyle[value];
+        }
+        container.appendChild(ordinaryOfBox[i]);
+        // ボタンクリック関数
+        ordinaryOfBox[i].addEventListener('click',function(){
+            let createOrdinaryDid = document.createElement('ul');
+            countOrdinary ++;
+            //getOption関数呼び出し、
+            createOrdinaryDid.textContent = getOption(ordinaryOfWord[i]);
+            ordinaryDidBox[i] = createOrdinaryDid;
+            countAddId.innerHTML = "＜日常＞" + countOrdinary;
+            //該当箇所に文字表示
+            ordinaryDidBox[i].id = ordinaryOfWord[i] + countOrdinary;
+            addOrdinaryDid.appendChild(ordinaryDidBox[i]);
+            ordinaryOfBox[i].style.backgroundColor = ordinaryButtoncolor;
+            //要素削除用関数
+            ordinaryDidBox[i].addEventListener('click',function(){
+                erOrdinaryDid = document.getElementById(ordinaryDidBox[i].id);
+                addOrdinaryDid.removeChild(erOrdinaryDid);
+                countOrdinary --;
+                countAddId.innerHTML = "＜家事＞" + countOrdinary;
                 },);
        },);
     }

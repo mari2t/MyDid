@@ -7,25 +7,41 @@
   
 </head>
 <body id="body">
-    <div class="backPicture"><div>
-    <h1 id="title">My Did</h1>
-    <h2 id="time"></h2>
-    <label>
-        <input type="checkbox" id = "checkId" name="nowTime">現在時刻追記　｜　任意時刻追記
-        <input type="time" id="setTime" name="setTime" step="600">
-    </label>
+    <header>
+        <div class="headerGroup">
+            <div class="groupTitle">
+                <h1 class="title">MyDid</h1>
+            </div>
+            <div class="groupTime">
+                <h2 id="time"></h2>
+            </div>
+            <label id="freeWordLabel">
+                できたことの後に追記
+                <input type="text" id="freeWord" name = "freeWord"
+                maxlength="60" size="40"> 
+            </label>
+            <label id="setTimeLabel">
+                任意時刻追記
+                <input type="time" id="setTime" name="setTime" step="600"> 
+            </label>
+            <label id="checkboxLabel">
+                <input type="checkbox" id = "checkId" name="nowTime"> 現在時刻追記
+            </label>
+        </div>
+    </header>
+
     <p></p>
-    <label>
-        できたことの後に追記
-        <input type="text" id="freeWord" name = "freeWord" required
-        maxlength="30" size="30" length="100"> 
-    </label>
-    <p></p>
+    
     <div class="wrapOfList">
         <p></p>
         <div class="houseGroup">
-        <h3 id="houseText">家のやること</h3>
+        <h3 id="houseText">家事・育児</h3>
             <div id="houseList"></div>
+        </div>
+        <p></p>
+        <div class="ordinaryGroup">
+        <h3 id="ordinaryText">日常</h3>
+            <div id="ordinaryList"></div>
         </div>
         <p></p>
         <div class="myselfGroup">
@@ -36,9 +52,11 @@
         <p></p>
         <div class="allDidGroup">
         <h3 id="allDidList">今日できたこと</h3>
-        <div id="todayHouseText">＜家事＞</div>
+        <div id="todayHouseText"><家事・育児></div>
         <div id="houseDid"></div>
-        <div id="todayMyselfText">＜自分＞</div>
+        <div id="todayOrdinaryText"><日常></div>
+        <div id="ordinaryDid"></div>
+        <div id="todayMyselfText"><自分></div>
         <div id="myselfDid"></div>
         </div>
     </div>
