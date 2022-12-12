@@ -1,3 +1,11 @@
+/*  レスポンシブヘッダー調整　 */
+@media (max-width: 480px){#blog-title-inner,#title a{
+  height:80px!important;
+  width:auto;
+  }
+  #blog-title-inner {background-size: contain!important; }
+  }
+
 body {
   background-image: url("hydrangea.jpg");
   background-size: cover;
@@ -20,7 +28,7 @@ body {
 }
 .groupTitle {
   display: block;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .title {
   text-align: center;
